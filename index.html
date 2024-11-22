@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/images/s.png" type="image/x-icon">
+    <title>Library App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>Welcome to Starr Library</h1>
+            
+            <div class="entry-button">
+                <button id="new-book">New Book</button>
+                <button id="reset-book">Reset Library</button>
+            </div>
+        </div>
+        <div class="form-popup" id="my-form">
+            <form action="" id="form">
+                <h1>New Book</h1>
+    
+                <label for="title"><b>Title</b></label>
+                <input type="text" name="title" id="form-title" required>
+    
+                <label for="author"><b>Author</b></label>
+                <input type="text" name="author" id="form-author" required>
+    
+                <label for="pages"><b>Number of Pages</b></label>
+                <input type="number" name="pages" id="form-pages">
+    
+                <label for="date"><b>Date added</b></label>
+                <input type="date" name="date" id="form-date" >
+    
+                <div class="isReadStatus">
+                    <label>
+                        <input type="radio" name="readStatus" class="readStatus" value="Read"> Read
+                    </label><br>
+                    <label>
+                        <input type="radio" name="readStatus" class="readStatus" value="Still reading"> Still reading
+                    </label><br>
+                    <label>
+                        <input type="radio" name="readStatus" class="readStatus" value="Not read"> Not read
+                    </label>
+                </div>
+    
+                <button type="submit" id="form-submit" >Add Book</button>
+            </form>
+        </div>
+
+        <div id="library-container">
+            <h1>My Library</h1>
+            <div id="card-container"></div>
+        </div>
+    </div>
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html>

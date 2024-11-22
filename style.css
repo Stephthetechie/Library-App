@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+
+}
+body{
+    background-color: #DDD9D4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.heading{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    padding: 20px;
+}
+.heading h1{
+    font-size: 50px;
+    text-align: center;
+    background-image: url(./images/inaki-del-olmo-NIJuEQw0RKg-unsplash.jpg);
+    background-size: 25%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.heading h1::first-letter{
+    font-size: 60px;
+}
+
+.entry-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.entry-button button{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #f3bf81, #b8711b);
+    color: #7f4805;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#form{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    gap: 7px;
+    border: 2px double #f3bf81;
+    max-width: 500px;
+    margin: 0 auto;
+}
+#form h1{
+    font-size: 30px;
+    background-image: url(./images/inaki-del-olmo-NIJuEQw0RKg-unsplash.jpg);
+    background-size: 20%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+#form label{
+    font-size: 18px;
+    color: #7f4805;
+}
+#form input[type="text"], [type="number"],[type="date"]{
+    font-size: 16px;
+    padding: 5px;
+    color: #7f4805;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px ;
+    outline: none;
+}
+#form input[type="radio"]{
+    font-size: 16px;
+    padding: 5px;
+    accent-color: #7f4805;
+    border: none;
+}
+
+#form.read{
+    display: flex;
+    gap: 7px;
+}
+#form button{
+    padding: 5px;
+    background-image: linear-gradient(to right, #f3bf81, #b8711b);
+    color: #7f4805;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+#library-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 30px;
+}
+#library-container > h1{
+    font-size: 30px;
+    background-image: url(./images/inaki-del-olmo-NIJuEQw0RKg-unsplash.jpg);
+    background-size: 20%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+}
+#card-container{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    flex-wrap: wrap;
+
+}
+.card{
+    flex-grow: 0;
+    flex-basis: 300px;
+    position: relative;
+    width: 300px;
+    background-color: #f3bf81;
+    text-align: center;
+    color: #f3bf81;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.card::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(./images/eliott-reyna-kcT-7cirBEw-unsplash.jpg);
+    background-position: 20% 20%;
+    background-size: cover;
+    filter: blur(2px);
+    z-index: 0;
+}
+.card h1, .card p{
+    position: relative;
+    z-index: 1;
+}
+.card p{
+    font-weight: 500;
+    font-size: 18px;
+}
+.cardButtons{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 10px 0;
+    position: relative;
+    z-index: 1;
+}
+.cardButtons button{
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+.cardButtons button:hover{
+    background-color: #cb8c3f;
+    color: white;
+}
