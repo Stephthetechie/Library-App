@@ -96,50 +96,13 @@ const makeCard = (book) => {
 
 
 
-// const handleChangeReadButton = (e)=>{
-//     let readIndex = e.target.getAttribute('data-index');
-//     let book = library[readIndex];
-//     let cardToChange = document.querySelector(`[data-index ="${readIndex}]"`);
-//     let readStatus = cardToChange.querySelector('.isReadStatus');
-   
-//     if (book.isRead === "Read") {
-//         book.isRead="Still reading"
-//     } else if(book.isRead === "Still reading"){
-//         book.isRead = "Not Read"
-
-//     }else{
-//         book.isRead = "Read"
-//     }
-//     readStatus.textContent = `~ ${book.isRead}`
-// }
-// const handleRemoveBook = (e)=>{
-//     let removeIndex = e.target.getAttribute('data-index');
-//     let cardToRemove = document.querySelector(`[data-index = "${removeIndex}"]`);
-
-//     if (cardToRemove) {
-//         cardContainer.removeChild(cardToRemove);
-//         library.splice(removeIndex, 1)
-
-//     }
-// }
-
-// cardContainer.addEventListener('click', (e)=>{
-//     if (e.target.classList.contains ('changeReadButton'))  {
-//         handleChangeReadButton(e)
-//     } else if(e.target.classList.contains('removeButton')){
-//         handleRemoveBook(e)
-//     }
-// })   
-
-
-
 function changeBook(e) {
     if (e.target.classList.contains("removeButton")) {
         let index = e.target.getAttribute("data-index")
         let cardToRemove = e.target.closest('.card')
         cardContainer.removeChild(cardToRemove);
         library.splice(index, 1);
-        resetLibrary();
+       
         library.forEach((book, newIndex) => makeCard(book, newIndex));
     } else if (e.target.classList.contains("changeReadButton")) {
         let index =(e.target.getAttribute("data-index"), 10);
