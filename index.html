@@ -4,17 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="/images/s.png" type="image/x-icon">
-    <title>Library App</title>
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
+    <link href="https://fonts.cdnfonts.com/css/uber-move-text" rel="stylesheet">
+
+    <title>STAR LIBRARY</title>
 </head>
 <body>
     <div class="container">
+        <nav>
+            <div class="logo">
+                <h1>Star Library<span>&copy;</span></h1>
+            </div>
+        </nav>
         <div class="heading">
-            <h1>Welcome to Starr Library</h1>
+            <div class="heading-text">
+                <h1>Welcome to Star Library</h1>
+            <p>Your Books, Your World...</p>
+            </div>
             
             <div class="entry-button">
                 <button id="new-book">New Book</button>
-                <button id="reset-book">Reset Library</button>
+                <button id="view-book">View Library</button>
             </div>
         </div>
         <div class="form-popup" id="my-form">
@@ -32,7 +42,19 @@
     
                 <label for="date"><b>Date added</b></label>
                 <input type="date" name="date" id="form-date" >
-    
+
+                <label for="genre"><b>Genre</b></label>
+                <select name="genre" id="form-genre">
+                    <option value="select">Select</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="thriller">Thriller & Suspence</option>
+                    <option value="horror">Horror</option>
+                    <option value="fiction">Fiction</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="action">Action</option>
+                    <option value="adventure">Adventure</option>
+                </select>
+                    
                 <div class="isReadStatus">
                     <label>
                         <input type="radio" name="readStatus" class="readStatus" value="Read"> Read
@@ -49,11 +71,11 @@
             </form>
         </div>
 
-        <div id="library-container">
+        <!-- <div id="library-container">
             <h1>My Library</h1>
             <div id="card-container"></div>
-        </div>
-    </div>
+        </div> -->
+       
 
 
 

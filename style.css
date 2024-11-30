@@ -1,40 +1,81 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", serif;
+    font-family: "Playfair Display", serif;
 
 }
 body{
+    background-image: url(./images/joshua-coleman-FYev7eaTcRE-unsplash.jpg);
+    background-size: cover;
+    background-position: 70% 20%;
     background-color: #DDD9D4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   
     height: auto;
+    padding: 20px;
+}
+.container::before, #library-container::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(./images/joshua-coleman-FYev7eaTcRE-unsplash.jpg);
+    background-position: 20% 20%;
+    background-size: cover;
+    filter: blur(2px);
+    z-index: -10;
 }
 
+nav{
+    display: flex;
+    justify-content: left;
+    align-items: center;}
+.logo{
+    padding: 20px;
+}
+.logo h1{
+    font-family: Uber Move Text, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;;
+    font-size: 40px;
+    color: #d69648;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 3px #000;}
+    .logo h1 span{
+        color: #000;
+        font-size: 25px;
+        font-family: inherit;
+    }
 .heading{
     display: flex;
     gap: 20px;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     padding: 20px;
+    transition: transform 0.3s ease-in-out;
 }
-.heading h1{
+.heading-text h1{
     font-size: 50px;
     text-align: center;
-    background-image: url(./images/inaki-del-olmo-NIJuEQw0RKg-unsplash.jpg);
+    /* background-image: url(./images/inaki-del-olmo-NIJuEQw0RKg-unsplash.jpg);
     background-size: 25%;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    background-clip: text;
+    background-clip: text; */
 }
-.heading h1::first-letter{
-    font-size: 60px;
+.heading-text p{
+    font-size:20px;
+    font-style: italic;
 }
 
+.heading.move-up{
+    transform: translateY(-100px);
+}
 .entry-button{
     display: flex;
     justify-content: center;
@@ -47,34 +88,42 @@ body{
     border: none;
     cursor: pointer;
     background-image: linear-gradient(to right, #f3bf81, #b8711b);
-    color: #7f4805;
+    color: #000;
     font-size: 20px;
     font-weight: 600;
 }
+.entry-button button:hover{
+    background-image: linear-gradient(to bottom, #b8711b, #f3bf81);
+}
 
 #form{
+    background-image: linear-gradient(to right, #f3bf81, #d18426);
     display: none;
     flex-direction: column;
     justify-content: center;
     padding: 30px;
     gap: 7px;
-    border: 2px double #f3bf81;
+    border: none;
+    border-radius: 15px;
     max-width: 500px;
     margin: 0 auto;
 }
+#form.move-up{
+    transform: translateY(-100px);
+}
 #form h1{
     font-size: 30px;
-    background-image: url(./images/inaki-del-olmo-NIJuEQw0RKg-unsplash.jpg);
+    /* background-image: url(./images/inaki-del-olmo-NIJuEQw0RKg-unsplash.jpg);
     background-size: 20%;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    background-clip: text;
+    background-clip: text; */
 }
 #form label{
     font-size: 18px;
     color: #7f4805;
 }
-#form input[type="text"], [type="number"],[type="date"]{
+#form input[type="text"], [type="number"],[type="date"], select{
     font-size: 16px;
     padding: 5px;
     color: #7f4805;
@@ -90,35 +139,39 @@ body{
     border: none;
 }
 
+#form input:hover, select:hover{
+    box-shadow: 1px 1px 5px ;
+}
 #form.read{
     display: flex;
     gap: 7px;
 }
 #form button{
     padding: 5px;
-    background-image: linear-gradient(to right, #f3bf81, #b8711b);
-    color: #7f4805;
+    background-color: #000;
+    color: #fff;
     font-size: 20px;
     font-weight: 600;
     border: none;
     border-radius: 10px;
     margin: 5px;
+    cursor: pointer;
+}
+#form button:hover{
+    background-image: linear-gradient(to right, hsl(33, 83%, 30%), hsl(33, 74%, 60%));
+    color: hsl(33, 90%, 12%);
+
 }
 
 #library-container{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 10px;
+    gap: 30px;
     margin-top: 30px;
 }
 #library-container > h1{
     font-size: 30px;
-    background-image: url(./images/inaki-del-olmo-NIJuEQw0RKg-unsplash.jpg);
-    background-size: 20%;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
     text-align: center;
 }
 #card-container{
@@ -135,42 +188,62 @@ body{
     width: 300px;
     background-color: #f3bf81;
     text-align: center;
-    color: #f3bf81;
-    padding: 10px;
+    color: #000;
+    padding: 15px;
     border-radius: 10px;
     overflow: hidden;
+    transition: transform 0.8s ease-in-out;
 }
-.card::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url(./images/eliott-reyna-kcT-7cirBEw-unsplash.jpg);
-    background-position: 20% 20%;
-    background-size: cover;
-    filter: blur(2px);
-    z-index: 0;
+.card:hover{
+    transform: scale(1.05);
 }
-.card h1, .card p{
+.card h1{
+    /* background-color: #6e410970; */
+    width: 100%;
+    border-radius: 10px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 10px 0;
+    height: auto;
     position: relative;
-    z-index: 1;
+    z-index: 10;
+
+}
+.card p:nth-last-child(2) {
+    z-index: 11;
+    position: relative;
 }
 .card p{
+    position: relative;
+    z-index: 11;
+    margin: 5px 0;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
+    font-style: italic;
 }
+.card h2{
+    position: relative;
+    z-index: 10;
+    padding-bottom: 10px;
+    /* background-color: #6e410970; */
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    font-size: 18px;
+    font-style: italic;
+}
+
 .cardButtons{
     display: flex;
     gap: 15px;
     justify-content: center;
     margin: 10px 0;
     position: relative;
-    z-index: 1;
+    z-index: 10;
 }
 .cardButtons button{
-    padding: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
     border-radius: 10px;
     border: none;
     cursor: pointer;
