@@ -39,7 +39,7 @@ nav{
 }
 .logo h1{
     font-family: Uber Move Text, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;;
-    font-size: 40px;
+    font-size: 30px;
     color: #d69648;
     font-weight: 700;
     text-transform: uppercase;
@@ -47,7 +47,7 @@ nav{
     text-shadow: 1px 1px 3px #000;}
     .logo h1 span{
         color: #000;
-        font-size: 25px;
+        font-size: 15px;
         font-family: inherit;
     }
 .heading{
@@ -107,6 +107,7 @@ nav{
     border-radius: 15px;
     max-width: 500px;
     margin: 0 auto;
+    transition: transform 0.3s ease-in-out;
 }
 #form.move-up{
     transform: translateY(-100px);
